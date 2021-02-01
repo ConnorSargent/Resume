@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 
-/* colors */ 
+/* colors */
 
 .bg-color-name-title {
     background-color: #676767;
@@ -31,9 +31,16 @@
     background-color: #f4f4f4;
 }
 
+.bg-color-work-history {
+    background-color: #9b59b6;
+}
+
 /* generic rules */
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
 }
 
@@ -42,7 +49,7 @@ h1,h2,h3,h4 {
 }
 
 .general-sub {
-    font-family: "exo" ,sans-serif;
+    font-family: "exo", sans-serif;
     font-weight: 300;
     color: #fafafa;
 }
@@ -61,7 +68,8 @@ h1,h2,h3,h4 {
     float: none;
 }
 
-.section-heading {
+.section-heading,
+.history-heading {
     font-family: "exo", sans-serif;
     font-weight: 300;
     margin-top: 25px;
@@ -124,9 +132,9 @@ header {
 }
 
 .menuitem {
-height: 120px;
-text-align: center;
-padding: 0;
+    height: 120px;
+    text-align: center;
+    padding: 0;
 }
 
 .menuitem a {
@@ -166,8 +174,9 @@ padding: 0;
     transition-property: color;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-  }
-  .hvr-bounce-to-top:before {
+}
+
+.hvr-bounce-to-top:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -186,24 +195,30 @@ padding: 0;
     transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-  }
-  .hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
+}
+
+.hvr-bounce-to-top:hover,
+.hvr-bounce-to-top:focus,
+.hvr-bounce-to-top:active {
     color: white;
-  }
-  .hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before {
+}
+
+.hvr-bounce-to-top:hover:before,
+.hvr-bounce-to-top:focus:before,
+.hvr-bounce-to-top:active:before {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
     -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  }
+}
 
 /* footer */
 
 footer {
-background-color: #525252;
-color: #fafafa;
-min-height: 120px;
-margin: 0;
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0;
 }
 
 .cv-pdf i {
@@ -293,4 +308,74 @@ margin: 0;
 .personal-info-item .value {
     position: relative;
     width: 60%;
+}
+
+/* Skills */
+
+.progress {
+    position: relative;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.progress-type {
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 2px 10px;
+    color: #fafafa;
+    background-color: rgba(25, 25, 25, 0.2)
+}
+
+.progress-section {
+    margin: 40px 20px;
+}
+
+/* History */
+
+.history-heading {
+    color: #fafafa;
+    margin-bottom: 50px;
+}
+
+.timeline-item {
+    padding: 4em 2em 0em 2em;
+    position: relative;
+    color: #fafafa;
+    border-left: 1px solid;
+}
+
+.timeline-item p {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-family: "exo", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    margin-top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: '';
+    background-color: #fafafa;
+}
+
+.history-items{
+    margin-bottom: 50px;
+    
 }
